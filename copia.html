@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Diseños</title>
+    <script src="./index.js" defer></script>
+  <!--   <style>
+      /* Estilo general para el body */
+      body {
+        font-family: "Arial", sans-serif;
+        background: #f7f7f7;
+        background-image: url("CAD.jpg"); /* Imagen de fondo */
+        background-size: cover; /* La imagen cubre todo el fondo */
+        background-position: center; /* Centra la imagen */
+        background-attachment: fixed; /* Hace que la imagen se quede fija al hacer scroll */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin: 0;
+        color: #fff;
+      }
+
+      /* Título principal */
+      /* Título principal mejorado */
+      h1 {
+        font-size: 3.8em;
+        color: #fff;
+        margin-bottom: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        position: relative;
+        padding-bottom: 10px;
+        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(90deg, #b5343a, #e67e22, #3498db);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: glow 1s infinite;
+      }
+
+      /* Efecto de animación suave */
+      @keyframes glow {
+        0%,
+        100% {
+          text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), 0 0 20px #3498db;
+        }
+        50% {
+          text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.6), 0 0 30px #e67e22;
+        }
+      }
+
+      /* Línea decorativa para el título */
+      h1::after {
+        content: "";
+        display: block;
+        width: 150px;
+        height: 5px;
+        background: linear-gradient(90deg, #3498db, #e67e22, #b5343a);
+        margin: 10px auto 0;
+        border-radius: 5px;
+      }
+
+      /* Contenedor de la galería */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 imágenes por fila */
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+        max-width: 1800px; /* Máximo ancho de la galería */
+        padding: 10px;
+      }
+
+      /* Diseño del bloque de cada imagen */
+      .image-block {
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 20px;
+        height: 550px; /* Ajustado para dar más espacio */
+      }
+
+      /* Efecto al pasar el ratón (brillo en los bordes) */
+      .image-block:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Estilo para la imagen */
+      .image-block img {
+        width: 100%;
+        height: 350px; /* Aumenta la altura de la imagen */
+        object-fit: cover;
+        border-bottom: 3px solid #ddd;
+        transition: transform 0.3s ease;
+      }
+
+      .image-block:hover img {
+        transform: scale(1.1);
+      }
+
+      /* Estilo para los textos (títulos y descripciones) */
+      .caption {
+        padding: 15px;
+        background-color: #fff;
+        color: #2c3e50;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .caption h4 {
+        font-size: 1.5em;
+        color: #2c3e50;
+        margin: 5px 0;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      .caption p {
+        font-size: 1em;
+        color: #7f8c8d;
+        line-height: 1.4;
+        margin: 0;
+        font-style: italic;
+      }
+
+      .image-block:hover .caption h4 {
+        color: #3498db;
+      }
+
+      /* Diseño responsivo para pantallas más pequeñas */
+      @media (max-width: 1024px) {
+        .gallery {
+          grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .gallery {
+          grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery {
+          grid-template-columns: 1fr; /* 1 imagen por fila */
+        }
+      }
+
+      /* Animación para la entrada de las imágenes */
+      .image-block {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease-in-out forwards;
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .image-block:nth-child(even) {
+        animation-delay: 0.2s;
+      }
+
+      .image-block:nth-child(odd) {
+        animation-delay: 0.4s;
+      }
+
+      /* Estilo para el botón de "Ver diseño original" */
+      .link-button {
+        padding: 12px 25px;
+        background-color: #3498db;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 1.1em;
+        cursor: pointer;
+        text-decoration: none;
+        position: absolute;
+        bottom: 15px;
+        left: 25%;
+        transform: translateX(0%);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Estilo cuando se pasa el ratón por encima */
+      .link-button:hover {
+        background-color: #2980b9;
+        transform: scale(1.1); /* El botón solo se agranda */
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Estilo cuando el botón es presionado */
+      .link-button:active {
+        background-color: #1abc9c;
+        transform: scale(1); /* Vuelve al tamaño normal */
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- Título Principal -->
+    <h1>SEMESTRAL DE CAD</h1>
+
+    <!-- Contenedor de la galería -->
+    <div class="gallery">
+      <!-- Bloques de imágenes -->
+<!--       <div class="image-block">
+        <a
+          href="https://www.tinkercad.com/things/iQyVgNnsNax-asignacion-1/edit?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Mesa.png" alt="Imagen 1" />
+        <div class="caption">
+          <h4>ASIGNACION #1</h4>
+          <p>MESA DE COMER</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://www.tinkercad.com/things/cvkwwfgNFTM-templo-talavera/edit?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Templo.png" alt="Imagen 2" />
+        <div class="caption">
+          <h4>ASIGNACION #2</h4>
+          <p>TEMPLO ANTIGUO</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Escudo Chimalli.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #3</h4>
+          <p>ESCUDO CHIMALLI</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Escudo Hoplita.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #3</h4>
+          <p>ESCUDO HOPLITA</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Escudo Barcelona.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #3</h4>
+          <p>ESCUDO DEL BARCELONA</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Escudo Personal.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #3</h4>
+          <p>ESCUDO PERSONAL</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Moneda BitCoin.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #3</h4>
+          <p>MONEDA BITCOIN</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Moneda Euro.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #3</h4>
+          <p>MONEDA EURO</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://www.tinkercad.com/things/aSAjQhBnTl2-robottalavera/edit?returnTo=%2Fthings%2FaSAjQhBnTl2-robottalavera"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Brazos Robotico.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #4</h4>
+          <p>BRAZO ROBOTICO PARA LA INDUSTRIA</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://www.tinkercad.com/things/3cFJra3nTkW-circuitoarduinotalavera/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Circuito 1.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #4</h4>
+          <p>CIRCUITO DE DIFERENTE TONOS DE LOCORES</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://www.tinkercad.com/things/eKvXKrOvJpb-circuitoscolorestalavera/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Circuito 2.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #4</h4>
+          <p>CIRCUITO DE VOLUMEN DE DIFERENTE COLORES</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://www.tinkercad.com/things/j5Mywr6pEW7-circuitotalaveraparalelo/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Circuito 3.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #4</h4>
+          <p>CIRCUITO PARA MEDIR EL VOLTAJE</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://fusion.online.autodesk.com/webapp?submit_button=Launch+Autodesk+Fusion"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Parcial 1.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>PARCIAL #1</h4>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://upanama-my.sharepoint.com/:u:/r/personal/miguel_talavera-s_up_ac_pa/Documents/BaseCPU.blend?csf=1&web=1&e=Yq03k9"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Cpu.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #5</h4>
+          <p>CPU Y SOCKET</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://upanama-my.sharepoint.com/:u:/r/personal/miguel_talavera-s_up_ac_pa/Documents/Dron.blend?csf=1&web=1&e=GtIFet"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Ram.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #5</h4>
+          <p>MEMORIA RAM Y SLOT</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://upanama-my.sharepoint.com/:u:/r/personal/miguel_talavera-s_up_ac_pa/Documents/Dron.blend?csf=1&web=1&e=OvX4fw"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Dron.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #6</h4>
+          <p>DRON PARA LA INDUSTRIA</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://upanama-my.sharepoint.com/:u:/r/personal/miguel_talavera-s_up_ac_pa/Documents/satelite.blend?csf=1&web=1&e=c3SJpn"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Satelite.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #6</h4>
+          <p>SATELITE DE COMUNICACIÓN</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Asignacion 7.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #7</h4>
+          <p>TERMOCICLADOR-INGENIERIA BIOMEDICA</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Asignacion 7.1.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #7</h4>
+          <p>ESPECTROFOTOMETRO-INGENIERIA BIOMEDICA</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Asignacion 7.2.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #7</h4>
+          <p>TOMOGRAFO-INGENIERIA BIOMEDICA</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Asignacion 7.3.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #7</h4>
+          <p>MICROSCOPIO-INGENIERIA BIOMEDICA</p>
+        </div>
+      </div>
+
+      <div class="image-block">
+        <a
+          href="https://app.sketchup.com/app"
+          class="link-button"
+          target="_blank"
+          >Ver Diseño Original</a
+        >
+        <img src="Asignacion 7.4.png" alt="Imagen 3" />
+        <div class="caption">
+          <h4>ASIGNACION #7</h4>
+          <p>ELECTROCADIOGRAFO-INGENIERIA BIOMEDICA</p>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>

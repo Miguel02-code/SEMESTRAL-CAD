@@ -1,0 +1,73 @@
+[
+    {
+        "link": "https://drive.google.com/drive/u/0/folders/1wfhtwuYJCmxsULVxNKJK4TmjSGBeERFW",
+        "nombre": "ASIGNACION #1",
+        "desc": "Una mesa sencilla diseñada en Blender presenta una estructura minimalista con líneas limpias y proporciones equilibradas; consta de un tablero rectangular liso y delgado, sostenido por cuatro patas cuadradas uniformes ligeramente inclinadas hacia afuera para mayor estabilidad. El acabado es sencillo, con una textura de madera clara o un color sólido mate, que resalta su diseño funcional y moderno, ideal para espacios pequeños o estilos contemporáneos.",
+        "img": ["Mesa.png"],
+        "imglink":["https://www.tinkercad.com/things/iQyVgNnsNax-asignacion-1/edit?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard"],
+        "clase":"tarea"
+    },
+    
+    {
+        "link": "https://drive.google.com/drive/u/0/folders/1ydUkeO3CnuuTXnxCPef6d6_bsS5_517O",
+        "nombre": "ASIGNACION #2",
+        "desc": "Un templo diseñado en Blender combina majestuosidad y simplicidad arquitectónica, con una base rectangular elevada por una plataforma de escaleras anchas que conducen a un pórtico adornado con columnas simétricas y estilizadas. Su estructura central culmina en un techo triangular o abovedado, con detalles geométricos o grabados que evocan un estilo antiguo, como el clásico o el oriental, mientras las texturas de piedra tallada o mármol pulido le dan un aire solemne y atemporal, perfecto para un ambiente. espiritual y reverente.",
+        "img": ["Templo.png"],
+        "imglink":["https://drive.google.com/drive/u/0/folders/1ydUkeO3CnuuTXnxCPef6d6_bsS5_517O"],
+        "clase": "tarea"
+    },
+    
+    {
+        "link": "https://drive.google.com/drive/u/0/folders/1O_-vA6EJ6-R0G2UJmQH21pzCusC1egX4",
+        "nombre": "ASIGNACION #3",
+        "desc": "Un escudo de Barcelona resalta por su forma clásica con bordes suaves y detalles precisos, incorporando los colores azul y grana, la cruz de San Jorge y el balón característico en el diseño central. Un escudo personal puede adoptar una silueta personalizada, con elementos simbólicos que reflejan identidad única, como iniciales estilizadas o figuras abstractas, empleando texturas metálicas o de madera para un acabado distintivo.",
+        "img": ["Escudo_Barcelona.png", "Escudo_Personal.png", "MonedaBitCoin.png", "MonedaEuro.png", "EscudoChimalli.png", "EscudoHoplita.png"],
+        "imglink":["https://drive.google.com/drive/u/0/folders/1O_-vA6EJ6-R0G2UJmQH21pzCusC1egX4"],
+        "clase": "tarea"
+    },
+    
+    {
+        "link": "https://drive.google.com/drive/u/0/folders/10YMtsU7PMoIxzt8_8TRb50bKbg-5isnh",
+        "nombre": "ASIGNACION #4",
+        "desc": "Un brazo robótico diseñado en Blender destaca por su estructura articulada y funcional, con segmentos metálicos conectados por juntas esféricas o cilíndricas que permiten movimientos precisos y fluidos. Su diseño incluye un acabado futurista en tonos metálicos como plata o negro mate, con detalles de cables expuestos y pequeños indicadores LED que aportan un toque tecnológico. La pinza o herramienta en el extremo es adaptable, mostrando dedos mecánicos o una garra multifuncional, ideal para tareas industriales o de ensamblaje, con texturas que simulan acero cepillado o plástico reforzado para un efecto realista.",
+        "img": ["BrazoSRobotico.png", "Circuito1.png", "Circuito2.png", "Circuito3.png"],
+        "clase": "tarea"
+    },
+    
+    {
+        "link": "https://drive.google.com/drive/u/0/folders/15y5UuqgFI9FWUoK3e0GIQys67wBWkUBj",
+        "nombre": "ASIGNACION #5",
+        "desc": "En Blender, una memoria RAM se modela como un módulo rectangular delgado con detalles precisos, como los pinos dorados en su borde inferior y los chips distribuidos simétricamente sobre una placa verde con trazos de circuitos visibles, acompañado de un disipador metálico estilizado para resaltar un diseño. moderno. Por otro lado, un CPU puede representarse como un bloque compacto con una carcasa cuadrada o rectangular, superficies metálicas pulidas y detalles grabados que identifican la marca o modelo, mientras que su parte inferior exhibe una rejilla de pinos o contactos electrónicos perfectamente alineados, evocando su papel como el cerebro del sistema.",
+        "img": ["Ram.png", "Cpu.png"],
+        "clase": "tarea"
+    },
+    {
+        "link": "https://drive.google.com/drive/u/0/folders/1rI2cD--KsqvUTW2uVqt_OLkkigfHfHc5",
+        "nombre": "Parcial #1",
+        "desc": "Se diseño un parcial el cual esta enfocado en el aprendizaje de como podemos trazar cada linea y medida para poder llegar al objetivo.",
+        "img": ["Parcial1.png"],
+        "clase": "parcial"
+    },
+    {
+        "link": "https://drive.google.com/drive/u/0/folders/1mStsrwaMZtm5yIu94dJrmEqvCI59gHGQ",
+        "nombre": "Parcial #2",
+        "desc": "Se hizo un video del cual esta enfocado en la diferentes presentaciones del cual ya hemos hecho durante el salon de clase.",
+        "img": ["Parcial2.png"],
+        "clase": "parcial"
+    },
+    {
+        "link": "https://drive.google.com/drive/u/0/folders/1pvMQNEyS221ZgBlOQrV6tlEWAdXX8Yfc",
+        "nombre": "Parcial #3",
+        "desc": "En Blender, un dron se modela como un dispositivo compacto y aerodinámico con un cuerpo central que integra una cámara esférica o cilíndrica, acompañado de cuatro brazos delgados que sostienen hélices equilibradas, con detalles como luces LED y texturas de carbono que refuerzan su apariencia moderna y funcional.",
+        "img": ["Satelite.png", "Dron.png"],
+        "clase": "parcial"
+    },
+    {
+        "link": "https://drive.google.com/drive/folders/1GY3thy0Dphlh5P7xjW1_1GUAoCPzELcF?hl=es-419",
+        "nombre": "SEMESTRAL",
+        "desc": "En Blender, un modelo enfocado en ingeniería biomédica puede representar un dispositivo protésico, como una pierna biónica, con una estructura elegante que combina materiales como fibra de carbono y titanio, con articulaciones mecánicas y detalles funcionales que simulan tendones y músculos.",
+        "img": ["Asignacion7.png", "Asignacion7.1.png", "Asignacion7.2.png", "Asignacion7.3.png", "Asignacion7.4.png"],
+        "clase": "semestral"
+    }
+
+]
