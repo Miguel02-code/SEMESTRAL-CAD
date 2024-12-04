@@ -30,7 +30,7 @@
         "link": "https://drive.google.com/drive/u/0/folders/10YMtsU7PMoIxzt8_8TRb50bKbg-5isnh",
         "nombre": "ASIGNACION #4",
         "desc": "Un brazo robótico diseñado en Blender destaca por su estructura articulada y funcional, con segmentos metálicos conectados por juntas esféricas o cilíndricas que permiten movimientos precisos y fluidos. Su diseño incluye un acabado futurista en tonos metálicos como plata o negro mate, con detalles de cables expuestos y pequeños indicadores LED que aportan un toque tecnológico. La pinza o herramienta en el extremo es adaptable, mostrando dedos mecánicos o una garra multifuncional, ideal para tareas industriales o de ensamblaje, con texturas que simulan acero cepillado o plástico reforzado para un efecto realista.",
-        "img": ["BrazoSRobotico.png", "Circuito1.png", "Circuito2.png", "Circuito3.png"],
+        "img": ["BrazosRobotico.png", "Circuito1.png", "Circuito2.png", "Circuito3.png"],
         "clase": "tarea"
     },
     
